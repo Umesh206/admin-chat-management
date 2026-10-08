@@ -1,95 +1,50 @@
 # Admin Chat Management
 
-Admin Chat Management is an admin-side chat management system designed to manage users, conversations, messages, and chat activities from a centralized dashboard.
+A lightweight WordPress plugin designed to manage administrative and customer chat functionalities directly within the WordPress admin dashboard and front-end interface.
+
+## Description
+
+**Admin Chat Management** provides an integrated interface for site administrators to manage and respond to chat interactions. It includes dedicated admin-side controls alongside front-end chat assets for seamless communication.
 
 ## Features
 
-* Admin dashboard
-* Manage users
-* Manage conversations
-* View and manage chat messages
-* Chat activity management
-* User and conversation search
-* Clean and responsive admin interface
-* Easy to extend and customize
+* **Admin Chat Dashboard:** Specialized styles (`admin.css`) and scripts (`admin.js`) for managing conversations within the WordPress backend[cite: 1].
+* **Front-End Chat Interface:** Lightweight styling (`chat.css`) and script execution (`chat.js`) for visitor or user interaction[cite: 1].
+* **Clean File Structure:** Lightweight, modular organization with minimal overhead[cite: 1].
 
-## Project Structure
+## File Structure
 
 ```text
 admin-chat-management/
-├── admin/
-├── assets/
-├── includes/
-├── components/
-├── uploads/
-├── index.php
-└── README.md
-```
-
-> The project structure may vary depending on the implementation.
-
-## Requirements
-
-* PHP 7.4+
-* MySQL 5.7+ / MariaDB
-* Apache or Nginx
-* Modern web browser
+├── admin-chat-management.php   # Main plugin file & entry point
+└── assets/
+    ├── admin.css               # Backend admin dashboard styles
+    ├── admin.js                # Backend admin dashboard scripts
+    ├── chat.css                # Front-end chat widget styles
+    └── chat.js                 # Front-end chat widget scripts
+```[cite: 1]
 
 ## Installation
 
-1. Clone the repository:
+1. Download or zip the `admin-chat-management` folder.
+2. Log in to your WordPress Admin Dashboard.
+3. Navigate to **Plugins > Add New > Upload Plugin**.
+4. Choose the `admin-chat-management.zip` file and click **Install Now**.
+5. Click **Activate Plugin**.
 
-```bash
-git clone https://github.com/YOUR-USERNAME/admin-chat-management.git
-```
-
-2. Move the project to your web server directory.
-
-3. Create a MySQL database.
-
-4. Configure the database connection according to your project configuration.
-
-5. Import the required database tables.
-
-6. Open the project in your browser.
-
-## Configuration
-
-Update your database and application settings in the appropriate configuration file.
-
-Example:
-
-```php
-DB_HOST
-DB_NAME
-DB_USER
-DB_PASSWORD
-```
+Alternatively, upload the `admin-chat-management` folder directly to your server's `/wp-content/plugins/` directory via FTP, then activate it from the WordPress Admin Dashboard[cite: 1].
 
 ## Usage
 
-After installation, log in to the admin panel and use the dashboard to:
+Once activated, the plugin initializes through `admin-chat-management.php`[cite: 1]:
+* Admin options and chat management tools are accessible from the WordPress admin menu[cite: 1].
+* Front-end scripts (`chat.js`) and styles (`chat.css`) automatically load on supported pages to render the chat interface for visitors[cite: 1].
 
-* Manage users
-* View conversations
-* Manage messages
-* Monitor chat activities
+## Requirements
 
-## Security
-
-* Keep database credentials secure.
-* Do not commit passwords, API keys, or secret credentials.
-* Use environment variables for sensitive configuration where possible.
-
-## Future Improvements
-
-* Real-time chat notifications
-* Advanced search and filtering
-* Chat reports and analytics
-* Role-based admin permissions
-* Email notifications
-* Real-time messaging support
+* **WordPress:** 5.0 or higher
+* **PHP:** 7.4 or higher
 
 ## License
 
-This project is for development and customization purposes.
+This plugin is open-source software licensed under the [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
